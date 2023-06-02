@@ -4,7 +4,7 @@ const logger = require("morgan");
 
 const shopsRouter = require('./routes/shops');
 const ordersRouter = require('./routes/orders');
-app = express();
+const app = express();
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
 
