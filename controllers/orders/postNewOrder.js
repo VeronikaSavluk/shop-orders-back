@@ -2,7 +2,7 @@ const Cart = require('../../service/cartModel');
 
 const postNewOrder = async (req, res, next) => {
 	try {
-		console.log(req.body)
+		
 		const newOrder = await Cart.create({...req.body});
 
 		res.json({
