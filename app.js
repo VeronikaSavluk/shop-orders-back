@@ -2,8 +2,8 @@ const express = require("express");
 const cors = require("cors");
 const logger = require("morgan");
 
-const shopsRouter = require('./routes/shops');
-const ordersRouter = require('./routes/orders');
+const shopsRouter = require('./src/routes/shops');
+const ordersRouter = require('./src/routes/orders');
 app = express();
 
 const formatsLogger = app.get('env') === 'development' ? 'dev' : 'short';
