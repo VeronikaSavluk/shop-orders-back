@@ -14,8 +14,8 @@ app.use(cors());
 app.use(express.json());
 app.use(express.static('public'));
 
-app.use('/api/shops', shopsRouter);
-app.use('/api', ordersRouter);
+app.use('/shops', shopsRouter);
+app.use('/shops', ordersRouter);
 
 app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
