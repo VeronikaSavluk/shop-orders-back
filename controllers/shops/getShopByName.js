@@ -6,12 +6,8 @@ const getShopByName = async (req, res, next) => {
 		
 		const shop = await Shop.find({shopName});
 
-	res.json({
-		status: 'success',
-		code: 200,
-		data: {
+	res.status(200).json({
 			shop
-		},
 	});
 	} catch (error) {
 		next(error);

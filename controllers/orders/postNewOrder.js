@@ -5,12 +5,8 @@ const postNewOrder = async (req, res, next) => {
 		
 		const newOrder = await Cart.create({...req.body});
 
-		res.json({
-			status: 'success',
-			code: 201,
-			data: {
-				newOrder,
-			}
+		res.status(201).json({
+				newOrder
 		});
 	} catch (error) {
 		next(error);
