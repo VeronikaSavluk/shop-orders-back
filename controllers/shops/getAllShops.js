@@ -1,6 +1,6 @@
 const Shop = require('../../service/shopModel');
 
-const getAllShops = async (_, res, next) => {
+const getAllShops = async (req, res, next) => {
 	try {
 		const allShops = await Shop.find();
 
