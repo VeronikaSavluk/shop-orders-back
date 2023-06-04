@@ -17,7 +17,7 @@ app.use(express.static('public'));
 app.use('/api/shops', shopsRouter);
 app.use('/api', ordersRouter);
 
-app.use((_, res) => {
+app.use((req, res) => {
   res.status(404).json({ message: 'Not found' });
 });
 
