@@ -4,10 +4,10 @@ const getAllOrders = async (req, res, next) => {
 try {
 	const { email } = req.body;
 	
-	const allOrders = await Cart.find({email});
+	const orders = await Cart.find({email});
 
 	res.status(200).json({
-			allOrders
+			orders
 	});
 } catch (error) {
 	next(error);

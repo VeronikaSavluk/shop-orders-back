@@ -9,16 +9,19 @@ const productSchema = new Schema ({
 		type: Number,
 		required: true
 	},
+	imageURL: {
+		type: String
+	},
 	amount: {
 		type: Number,
 		default: 0
 	},
-	imageURL: {
-		type: String
-	},
 	shopName: {
 		type: String,
 		required: true
+	},
+	totalPrice: {
+		type: Number
 	}
 });
 
@@ -35,7 +38,11 @@ const cartSchema = new Schema({
 		type: String,
 		required: true
 	},
-	orders: [productSchema]
+	address: {
+		type: String,
+		required: true
+	},
+	order: [productSchema]
 });
 
 const Cart = model('orders', cartSchema);
